@@ -113,7 +113,7 @@ export default function BuilderPage() {
 
   const addBlock = (type: BlockType) => {
     const newBlock: Block = {
-      id: `${type}-${Date.now()}`,
+      id: `${type}-${crypto.randomUUID()}`,
       type,
       content: { ...DEFAULT_CONTENT[type] },
     };
